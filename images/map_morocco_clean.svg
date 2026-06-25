@@ -1,0 +1,58 @@
+<svg viewBox="0 0 480 540" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;display:block;margin:0 auto;">
+  <rect width="480" height="540" fill="#F0EDE6" rx="6"/>
+
+  <!-- Ocean tint left of coast -->
+  <rect width="60" height="540" fill="#E8F0F8" opacity="0.5" rx="6"/>
+
+  <!-- Morocco silhouette -->
+  <path d="M 347.4,17.5 L 376.7,21.9 L 415.0,37.1 L 446.5,43.9 L 447.9,64.1 L 447.9,114.7 L 440.9,148.5 L 418.6,189.0 L 385.1,232.9 L 343.3,266.6 L 301.4,290.2 L 254.5,294.6 L 203.7,351.0 L 134.0,452.2 L 78.1,502.9 L 19.5,526.5 L 27.9,502.9 L 44.7,475.9 L 51.3,429.0 L 64.2,401.6 L 78.1,367.9 L 100.5,324.0 L 125.6,307.1 L 147.9,290.2 L 175.8,273.4 L 203.7,256.5 L 228.8,201.8 L 237.2,175.5 L 256.7,148.5 L 267.9,121.5 L 284.1,94.8 L 305.6,80.3 L 315.3,59.1 L 326.5,42.2 L 331.5,21.3 L 347.4,17.5 Z" fill="#D4D0C8" stroke="#B8B4AC" stroke-width="1.2" stroke-linejoin="round"/>
+
+  <!-- Algeria (simplified background) -->
+  <path d="M 446.5,43.9 L 480.0,43.9 L 480.0,540.0 L 254.5,294.6 L 446.5,43.9 Z" fill="#E0DDD7" stroke="none"/>
+
+  <!-- Morocco fill (slightly different from Western Sahara) -->
+  <!-- Main Morocco territory highlight -->
+  <path d="M 347.4,17.5 L 376.7,21.9 L 415.0,37.1 L 446.5,43.9 L 447.9,64.1 L 447.9,114.7 L 440.9,148.5 L 418.6,189.0 L 228.8,201.8 L 256.7,148.5 L 284.1,94.8 L 305.6,80.3 L 315.3,59.1 L 331.5,21.3 Z" fill="#1B2B4B" opacity="0.06"/>
+
+  <!-- Decorative line separating Morocco from Western Sahara -->
+  <line x1="418.6" y1="189.0" x2="228.8" y2="201.8" stroke="#B8B4AC" stroke-width="0.8" stroke-dasharray="4,3"/>
+
+  <circle cx="347.4" cy="17.5" r="7" fill="#B8962E" opacity="0.18"/>
+  <circle cx="347.4" cy="17.5" r="4" fill="#B8962E"/>
+  <circle cx="347.4" cy="17.5" r="2" fill="white"/>
+  <text x="355.4" y="13.5" font-family="Georgia,serif" font-size="10" font-weight="400" fill="#1B2B4B" text-anchor="start">Tanger</text>
+  <circle cx="357.2" cy="80.0" r="7" fill="#B8962E" opacity="0.18"/>
+  <circle cx="357.2" cy="80.0" r="4" fill="#B8962E"/>
+  <circle cx="357.2" cy="80.0" r="2" fill="white"/>
+  <text x="365.2" y="84.0" font-family="Georgia,serif" font-size="10" font-weight="400" fill="#1B2B4B" text-anchor="start">Fès</text>
+  <circle cx="305.6" cy="80.3" r="7" fill="#B8962E" opacity="0.18"/>
+  <circle cx="305.6" cy="80.3" r="4" fill="#B8962E"/>
+  <circle cx="305.6" cy="80.3" r="2" fill="white"/>
+  <text x="297.6" y="84.3" font-family="Georgia,serif" font-size="10" font-weight="400" fill="#1B2B4B" text-anchor="end">Rabat</text>
+  <circle cx="284.1" cy="94.8" r="9" fill="#B8962E" opacity="0.18"/>
+  <circle cx="284.1" cy="94.8" r="6" fill="#B8962E"/>
+  <circle cx="284.1" cy="94.8" r="2" fill="white"/>
+  <text x="276.1" y="90.8" font-family="Georgia,serif" font-size="12" font-weight="600" fill="#1B2B4B" text-anchor="end">Casablanca</text>
+  <circle cx="273.5" cy="161.0" r="7" fill="#B8962E" opacity="0.18"/>
+  <circle cx="273.5" cy="161.0" r="4" fill="#B8962E"/>
+  <circle cx="273.5" cy="161.0" r="2" fill="white"/>
+  <text x="265.5" y="165.0" font-family="Georgia,serif" font-size="10" font-weight="400" fill="#1B2B4B" text-anchor="end">Marrakech</text>
+  <circle cx="228.8" cy="201.8" r="7" fill="#B8962E" opacity="0.18"/>
+  <circle cx="228.8" cy="201.8" r="4" fill="#B8962E"/>
+  <circle cx="228.8" cy="201.8" r="2" fill="white"/>
+  <text x="220.8" y="205.8" font-family="Georgia,serif" font-size="10" font-weight="400" fill="#1B2B4B" text-anchor="end">Agadir</text>
+  <circle cx="128.4" cy="311.8" r="7" fill="#B8962E" opacity="0.18"/>
+  <circle cx="128.4" cy="311.8" r="4" fill="#B8962E"/>
+  <circle cx="128.4" cy="311.8" r="2" fill="white"/>
+  <text x="120.4" y="315.8" font-family="Georgia,serif" font-size="10" font-weight="400" fill="#1B2B4B" text-anchor="end">Laâyoune</text>
+  <circle cx="51.3" cy="429.0" r="7" fill="#B8962E" opacity="0.18"/>
+  <circle cx="51.3" cy="429.0" r="4" fill="#B8962E"/>
+  <circle cx="51.3" cy="429.0" r="2" fill="white"/>
+  <text x="43.3" y="433.0" font-family="Georgia,serif" font-size="10" font-weight="400" fill="#1B2B4B" text-anchor="end">Dakhla</text>
+
+  <!-- Atlantic Ocean label -->
+  <text x="30" y="280" font-family="Georgia,serif" font-size="9" fill="#8BA0B8" letter-spacing="0.12em" text-anchor="middle" transform="rotate(-80,30,280)">OCÉAN ATLANTIQUE</text>
+
+  <!-- Caption -->
+  <text x="12" y="530" font-family="Georgia,serif" font-size="9" fill="#9CA3AF" letter-spacing="0.1em">CA.E.M.C — PRÉSENCE NATIONALE</text>
+</svg>

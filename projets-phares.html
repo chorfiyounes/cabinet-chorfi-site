@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets Phares — CA.E.M.C SARL</title>
+  <meta name="description" content="Découvrez les projets phares du Cabinet CA.E.M.C — hôtellerie, santé, éducation, IGH, industrie, résidentiel et plus." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=31" />
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img src="images/logo.png" alt="CA.E.M.C SARL" /></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Références</a></li>
+      <li><a href="projets-phares.html" class="active">Projets Phares</a></li>
+      <li><a href="awards.html">Prix & Médias</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="contact.html" class="btn-nav">Nous contacter</a>
+    </div>
+    <button class="burger" id="burger">&#9776;</button>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="page-hero-eyebrow">Réalisations sélectionnées</span>
+    <h1>Projets Phares</h1>
+    <p>Une sélection de nos réalisations les plus marquantes, organisées par secteur.</p>
+  </div>
+</section>
+
+<!-- FILTRES -->
+<div class="projects-filter">
+  <div class="container">
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">Tous</button>
+      <button class="filter-tab" data-filter="hotellerie">Hôtellerie</button>
+      <button class="filter-tab" data-filter="education">Éducation</button>
+      <button class="filter-tab" data-filter="sante">Santé</button>
+      <button class="filter-tab" data-filter="igh">IGH</button>
+      <button class="filter-tab" data-filter="industrie">Industrie</button>
+      <button class="filter-tab" data-filter="residentiel">Résidentiel</button>
+      <button class="filter-tab" data-filter="bureaux">Bureaux</button>
+      <button class="filter-tab" data-filter="commerces">Commerces</button>
+      <button class="filter-tab" data-filter="public">Bâtiments Publics</button>
+    </div>
+  </div>
+</div>
+
+<!-- GRILLE -->
+<div style="padding:60px 0 80px; background:var(--off-white);">
+  <div class="container">
+    <div class="phares-grid" id="phares-grid">
+
+      <!-- HÔTELLERIE -->
+      <div class="phare-card" data-category="hotellerie">
+        <div class="phare-img">
+          <img src="images/projets-phares/hotellerie/four_seasons_rabat/cover.jpg"
+               alt="Hôtel Four Seasons Ksar Al Bahr"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Four Seasons</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Hôtellerie</span>
+          <h3 class="phare-title">Hôtel Four Seasons Ksar Al Bahr</h3>
+          <p class="phare-meta">Rabat &nbsp;·&nbsp; 2019</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="hotellerie">
+        <div class="phare-img">
+          <img src="images/projets-phares/hotellerie/hyatt_marrakech/cover.jpg"
+               alt="Hôtel HYATT PARK Al Maâden"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Hyatt Marrakech</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Hôtellerie</span>
+          <h3 class="phare-title">Hôtel HYATT PARK Al Maâden</h3>
+          <p class="phare-meta">Marrakech &nbsp;·&nbsp; 2019</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="hotellerie">
+        <div class="phare-img">
+          <img src="images/projets-phares/hotellerie/villa_saharai/cover.jpg"
+               alt="Hôtel Villa Saharai"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Villa Saharai</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Hôtellerie</span>
+          <h3 class="phare-title">Hôtel Villa Saharai</h3>
+          <p class="phare-meta">Casablanca &nbsp;·&nbsp; 2025</p>
+        </div>
+      </div>
+
+      <!-- ÉDUCATION -->
+      <div class="phare-card" data-category="education">
+        <div class="phare-img">
+          <img src="images/projets-phares/education/mundiapolis/cover.jpg"
+               alt="Université MUNDIAPOLIS"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>MUNDIAPOLIS</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Éducation</span>
+          <h3 class="phare-title">Université MUNDIAPOLIS</h3>
+          <p class="phare-meta">Nouacer &nbsp;·&nbsp; 2009</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="education">
+        <div class="phare-img">
+          <img src="images/projets-phares/education/ima_aeronautique/cover.jpg"
+               alt="Institut des Métiers de l'Aéronautique"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>IMA Aéronautique</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Éducation</span>
+          <h3 class="phare-title">Extension Institut des Métiers de l'Aéronautique</h3>
+          <p class="phare-meta">Nouacer &nbsp;·&nbsp; 2015</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="education">
+        <div class="phare-img">
+          <img src="images/projets-phares/education/honoris_emsi_eac/cover.jpg"
+               alt="Complexe universitaire HONORIS EMSI EAC MUNDIAPOLIS"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>HONORIS · EMSI · EAC</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Éducation</span>
+          <h3 class="phare-title">Complexe universitaire HONORIS – EMSI – EAC – MUNDIAPOLIS</h3>
+          <p class="phare-meta">Casa Anfa &nbsp;·&nbsp; 2025</p>
+        </div>
+      </div>
+
+      <!-- SANTÉ -->
+      <div class="phare-card" data-category="sante">
+        <div class="phare-img">
+          <img src="images/projets-phares/sante/akdital/cover.jpg"
+               alt="Clinique AKDITAL Anfa Prime Hospital"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>AKDITAL</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Santé</span>
+          <h3 class="phare-title">Clinique AKDITAL Anfa Prime Hospital</h3>
+          <p class="phare-meta">Casablanca &nbsp;·&nbsp; 2024</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="sante">
+        <div class="phare-img">
+          <img src="images/projets-phares/sante/oncorad_tanger/cover.jpg"
+               alt="Clinique d'oncologie ONCORAD"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>ONCORAD Tanger</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Santé</span>
+          <h3 class="phare-title">Clinique d'oncologie ONCORAD</h3>
+          <p class="phare-meta">Tanger &nbsp;·&nbsp; 2025</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="sante">
+        <div class="phare-img">
+          <img src="images/projets-phares/sante/littoral_clinic/cover.jpg"
+               alt="Clinique pluridisciplinaire Littoral Clinic"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Littoral Clinic</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Santé</span>
+          <h3 class="phare-title">Clinique pluridisciplinaire Littoral Clinic</h3>
+          <p class="phare-meta">Safi &nbsp;·&nbsp; 2025</p>
+        </div>
+      </div>
+
+      <!-- IGH -->
+      <div class="phare-card" data-category="igh">
+        <div class="phare-img">
+          <img src="images/projets-phares/igh/tour_entente_abidjan/cover.jpg"
+               alt="Tour Entente Abidjan"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Tour Entente · Abidjan</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">IGH</span>
+          <h3 class="phare-title">Tour Entente à 5 S/Sols, RDC et 22 Étages</h3>
+          <p class="phare-meta">Abidjan, Côte d'Ivoire &nbsp;·&nbsp; 2020</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="igh">
+        <div class="phare-img">
+          <img src="images/projets-phares/igh/auda_55/cover.jpg"
+               alt="Groupement immeubles AUDA 55"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Auda 55 · Casa Anfa</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">IGH</span>
+          <h3 class="phare-title">Groupement d'immeubles — 2 Tours R+22 + Immeuble R+6</h3>
+          <p class="phare-meta">Casa Anfa (Auda 55) &nbsp;·&nbsp; 2021</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="igh">
+        <div class="phare-img">
+          <img src="images/projets-phares/igh/auda_54_1/cover.jpg"
+               alt="Groupement immeubles AUDA 54.1"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Auda 54.1 · Casa Anfa</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">IGH</span>
+          <h3 class="phare-title">Groupement d'immeubles — Tour R+15 + 2 Immeubles R+7</h3>
+          <p class="phare-meta">Casa Anfa (Auda 54.1) &nbsp;·&nbsp; 2021</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="igh">
+        <div class="phare-img">
+          <img src="images/projets-phares/igh/aeria_park/cover.jpg"
+               alt="Tour Aeria Park"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Aeria Park · Casa Anfa</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">IGH</span>
+          <h3 class="phare-title">Tour à usage résidentiel et bureautique "Aeria Park"</h3>
+          <p class="phare-meta">Casa Anfa &nbsp;·&nbsp; 2021</p>
+        </div>
+      </div>
+
+      <!-- INDUSTRIE -->
+      <div class="phare-card" data-category="industrie">
+        <div class="phare-img">
+          <img src="images/projets-phares/industrie/logiparc/cover.jpg"
+               alt="LOGIPARC Bouskoura"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>LOGIPARC · Bouskoura</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Industrie</span>
+          <h3 class="phare-title">LOGIPARC — Bâtiments industriels</h3>
+          <p class="phare-meta">Bouskoura &nbsp;·&nbsp; 2015</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="industrie">
+        <div class="phare-img">
+          <img src="images/projets-phares/industrie/socodam/cover.jpg"
+               alt="Parc de stockage SOCODAM"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>SOCODAM · Tit Mellil</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Industrie</span>
+          <h3 class="phare-title">Parc de stockage métallurgique SOCODAM</h3>
+          <p class="phare-meta">Tit Mellil &nbsp;·&nbsp; 2021</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="industrie">
+        <div class="phare-img">
+          <img src="images/projets-phares/industrie/logiparc_2/cover.jpg"
+               alt="LOGIPARC 2"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>LOGIPARC 2 · Bouskoura</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Industrie</span>
+          <h3 class="phare-title">LOGIPARC 2 — Parc industriel</h3>
+          <p class="phare-meta">Bouskoura &nbsp;·&nbsp; 2025</p>
+        </div>
+      </div>
+
+      <!-- RÉSIDENTIEL -->
+      <div class="phare-card" data-category="residentiel">
+        <div class="phare-img">
+          <img src="images/projets-phares/residentiel/palais_presidentiel_niger/cover.jpg"
+               alt="Palais Présidentiel Niger"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Palais Présidentiel · Niger</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Résidentiel</span>
+          <h3 class="phare-title">Palais Présidentiel</h3>
+          <p class="phare-meta">République du Niger &nbsp;·&nbsp; 2015</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="residentiel">
+        <div class="phare-img">
+          <img src="images/projets-phares/residentiel/residence_eden/cover.jpg"
+               alt="Résidence d'Eden"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Résidence d\'Eden</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Résidentiel</span>
+          <h3 class="phare-title">Résidence d'Eden</h3>
+          <p class="phare-meta">Casablanca &nbsp;·&nbsp; 2021</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="residentiel">
+        <div class="phare-img">
+          <img src="images/projets-phares/residentiel/ensemble_bouskoura/cover.jpg"
+               alt="Ensemble résidentiel Bouskoura"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Ensemble résidentiel · Bouskoura</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Résidentiel</span>
+          <h3 class="phare-title">Ensemble résidentiel — 15 immeubles R+4/R+6</h3>
+          <p class="phare-meta">Bouskoura &nbsp;·&nbsp; 2025</p>
+        </div>
+      </div>
+
+      <!-- BUREAUX -->
+      <div class="phare-card" data-category="bureaux">
+        <div class="phare-img">
+          <img src="images/projets-phares/bureaux/studio_2m/cover.jpg"
+               alt="Studio 2M SOREAD"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Studio 2M · SOREAD</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Bureaux</span>
+          <h3 class="phare-title">Studio 2M — SOREAD</h3>
+          <p class="phare-meta">Casablanca &nbsp;·&nbsp; 2009</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="bureaux">
+        <div class="phare-img">
+          <img src="images/projets-phares/bureaux/cih_bank_siege/cover.jpg"
+               alt="Siège CIH BANK"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Siège CIH BANK</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Bureaux</span>
+          <h3 class="phare-title">Siège Social CIH BANK — 15ème étage</h3>
+          <p class="phare-meta">Casablanca &nbsp;·&nbsp; 2023</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="bureaux">
+        <div class="phare-img">
+          <img src="images/projets-phares/bureaux/societe_generale_siege/cover.jpg"
+               alt="Siège Société Générale"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Siège Société Générale</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Bureaux</span>
+          <h3 class="phare-title">Siège Social Société Générale</h3>
+          <p class="phare-meta">Casablanca &nbsp;·&nbsp; 2023</p>
+        </div>
+      </div>
+
+      <!-- COMMERCES -->
+      <div class="phare-card" data-category="commerces">
+        <div class="phare-img">
+          <img src="images/projets-phares/commerces/tachefine_mall/cover.jpg"
+               alt="Centre commercial TACHEFINE Mall"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>TACHEFINE Mall</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Commerces</span>
+          <h3 class="phare-title">Centre commercial TACHEFINE Mall</h3>
+          <p class="phare-meta">Casablanca &nbsp;·&nbsp; 2012</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="commerces">
+        <div class="phare-img">
+          <img src="images/projets-phares/commerces/marina_mall/cover.jpg"
+               alt="Centre commercial MARINA Mall"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>MARINA Mall</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Commerces</span>
+          <h3 class="phare-title">Centre commercial MARINA Mall</h3>
+          <p class="phare-meta">Casablanca &nbsp;·&nbsp; 2013</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="commerces">
+        <div class="phare-img">
+          <img src="images/projets-phares/commerces/ovillage/cover.jpg"
+               alt="Centre commercial OVILLAGE"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>OVILLAGE · Sidi Maarouf</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Commerces</span>
+          <h3 class="phare-title">Centre commercial OVILLAGE ex-Coca Cola</h3>
+          <p class="phare-meta">Sidi Maarouf &nbsp;·&nbsp; 2021</p>
+        </div>
+      </div>
+
+      <!-- BÂTIMENTS PUBLICS -->
+      <div class="phare-card" data-category="public">
+        <div class="phare-img">
+          <img src="images/projets-phares/public/mosquee_bir_jdid/cover.jpg"
+               alt="Mosquée Bir Jdid"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Mosquée Bir Jdid</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Bâtiments Publics</span>
+          <h3 class="phare-title">Mosquée Bir Jdid</h3>
+          <p class="phare-meta">Bir Jdid &nbsp;·&nbsp; 2015</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="public">
+        <div class="phare-img">
+          <img src="images/projets-phares/public/aeroport_errachidia/cover.jpg"
+               alt="Aéroport d'Errachidia ONDA"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Aéroport Errachidia · ONDA</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Bâtiments Publics</span>
+          <h3 class="phare-title">Aéroport d'Errachidia — ONDA</h3>
+          <p class="phare-meta">Errachidia &nbsp;·&nbsp; 2016</p>
+        </div>
+      </div>
+
+      <div class="phare-card" data-category="public">
+        <div class="phare-img">
+          <img src="images/projets-phares/public/mosquee_al_qimma/cover.jpg"
+               alt="Mosquée AL QIMMA"
+               onerror="this.parentElement.innerHTML='<div class=\'phare-placeholder\'><span>Mosquée AL QIMMA</span></div>'" />
+        </div>
+        <div class="phare-info">
+          <span class="phare-badge">Bâtiments Publics</span>
+          <h3 class="phare-title">Mosquée AL QIMMA</h3>
+          <p class="phare-meta">Mohammedia &nbsp;·&nbsp; 2023</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Vous avez un projet ?<br>Parlons-en.</h2>
+    <p>Notre équipe vous répond dans les plus brefs délais.</p>
+    <a href="contact.html" class="btn-primary btn-large">Nous contacter →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo"><img src="images/logo_full_color.png" alt="CA.E.M.C SARL" style="height:130px;width:auto;mix-blend-mode:multiply;" /></div>
+        <p>Cabinet d'Études et Métrés Chorfi<br>Économie de la construction depuis 1975</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Références</a></li>
+          <li><a href="projets-phares.html">Projets Phares</a></li>
+          <li><a href="awards.html">Prix & Médias</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>218, Bd Zerktouni, 5ème étage<br>Casablanca, Maroc</p>
+        <p style="line-height:2;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:5px;position:relative;top:-1px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>+212 5 22 26 91 01<br><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:5px;position:relative;top:-1px;"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>+212 5 22 20 74 98</p>
+        <p style="line-height:2;"><span style="display:block;"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-right:5px;position:relative;top:-1px;"><path fill="#25D366" d="M12 0C5.373 0 0 5.373 0 12c0 2.125.557 4.118 1.531 5.843L.057 24l6.305-1.654A11.882 11.882 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/><path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg><a href="https://wa.me/212661553443" target="_blank" style="display:inline;">+212 6 61 15 53 43</a></span></p>
+      </div>
+      <div class="footer-lang">
+        <h4>Langue</h4>
+        <a href="projets-phares.html" class="lang-active">Français</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CA.E.M.C SARL — Cabinet d'Études et Métrés Chorfi. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/212661728125" class="whatsapp-float" target="_blank" title="WhatsApp">
+  <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="#25D366" d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326z"/><path fill="white" d="M11.609 9.587c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
+</a>
+
+<script src="main.js"></script>
+<script>
+  // Filtre projets phares
+  const tabs = document.querySelectorAll('.filter-tab');
+  const cards = document.querySelectorAll('.phare-card');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.filter;
+      cards.forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
