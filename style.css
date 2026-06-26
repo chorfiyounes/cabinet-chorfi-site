@@ -208,6 +208,26 @@ body.nav-open .burger span:nth-child(3) { transform: rotate(-45deg) translate(5p
 /* ===========================
    HERO
    =========================== */
+.hero-bg-nums {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+.hero-bg-num {
+  position: absolute;
+  font-family: monospace;
+  color: rgba(184,150,46,0.12);
+  font-weight: 700;
+  opacity: 0;
+}
+@keyframes heroBgNumFall {
+  0%   { opacity: 0; transform: translateY(-32px); }
+  15%  { opacity: 1; }
+  80%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(12px); }
+}
 .hero {
   min-height: 100vh;
   display: flex;
