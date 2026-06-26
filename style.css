@@ -1225,7 +1225,7 @@ footer {
   border-bottom: 1px solid var(--gray-100);
 }
 
-.projects-table { width: 100%; border-collapse: collapse; }
+.projects-table { width: 100%; border-collapse: collapse; table-layout: fixed; }
 
 .projects-table tr {
   border-bottom: 1px solid var(--gray-100);
