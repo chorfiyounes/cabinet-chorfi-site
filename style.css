@@ -1245,10 +1245,19 @@ footer {
   color: var(--navy);
 }
 
+.projects-table td:nth-child(2) {
+  width: 160px;
+  text-align: right;
+  white-space: nowrap;
+  color: var(--gray-500);
+}
+
 .projects-table td:last-child {
+  width: 60px;
   color: var(--gold);
   font-weight: 400;
   text-align: right;
+  white-space: nowrap;
 }
 
 /* ===========================
