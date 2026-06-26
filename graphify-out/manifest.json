@@ -1,0 +1,572 @@
+{
+  "main.js": {
+    "mtime": 1782340204.8690512,
+    "ast_hash": "c2ceb6080d9a4cad7e7923808b8cc915",
+    "semantic_hash": "c2ceb6080d9a4cad7e7923808b8cc915"
+  },
+  "about.html": {
+    "mtime": 1782429432.417116,
+    "ast_hash": "85522ab0c511f294e51fd639f3cf172d",
+    "semantic_hash": "85522ab0c511f294e51fd639f3cf172d"
+  },
+  "awards.html": {
+    "mtime": 1782429432.4397902,
+    "ast_hash": "675887a6231e7560790f4a2a3d643d6b",
+    "semantic_hash": "675887a6231e7560790f4a2a3d643d6b"
+  },
+  "contact.html": {
+    "mtime": 1782429432.4799857,
+    "ast_hash": "e7907f78139ba5e63ebb4db5e52ebb51",
+    "semantic_hash": "e7907f78139ba5e63ebb4db5e52ebb51"
+  },
+  "google1fd4ad60f4c1d23a.html": {
+    "mtime": 1782429432.5007727,
+    "ast_hash": "762964db23062b856d74f620d20c2d27",
+    "semantic_hash": "762964db23062b856d74f620d20c2d27"
+  },
+  "index.html": {
+    "mtime": 1782429661.733626,
+    "ast_hash": "9fcd6c744f77f595370271d899cbc402",
+    "semantic_hash": "9fcd6c744f77f595370271d899cbc402"
+  },
+  "projects.html": {
+    "mtime": 1782429432.553268,
+    "ast_hash": "3681f2f5ced1b94aa8ca7295a321baa6",
+    "semantic_hash": "3681f2f5ced1b94aa8ca7295a321baa6"
+  },
+  "projets-phares.html": {
+    "mtime": 1782429442.7661052,
+    "ast_hash": "e2ce848f43c8caa77e14ab5c7e274489",
+    "semantic_hash": "e2ce848f43c8caa77e14ab5c7e274489"
+  },
+  "robots.txt": {
+    "mtime": 1782424467.5426848,
+    "ast_hash": "20867eebf39efd349089723b28fc74b3",
+    "semantic_hash": "20867eebf39efd349089723b28fc74b3"
+  },
+  "services.html": {
+    "mtime": 1782429432.6068623,
+    "ast_hash": "f681843d2e1f66a00ecbb3a7314e4b27",
+    "semantic_hash": "f681843d2e1f66a00ecbb3a7314e4b27"
+  },
+  "images/award_african_excellence.jpg": {
+    "mtime": 1782337747.765314,
+    "ast_hash": "76dde38cd96499b40c04363af676ba15",
+    "semantic_hash": "76dde38cd96499b40c04363af676ba15"
+  },
+  "images/award_aigle_platine.jpg": {
+    "mtime": 1782337747.7397065,
+    "ast_hash": "dc2dfccaa5b2795e7fe0960969d72490",
+    "semantic_hash": "dc2dfccaa5b2795e7fe0960969d72490"
+  },
+  "images/award_global100.jpg": {
+    "mtime": 1782337747.783146,
+    "ast_hash": "28a7d53e54be37a71f56b8b1a60519ed",
+    "semantic_hash": "28a7d53e54be37a71f56b8b1a60519ed"
+  },
+  "images/award_golden_eagle.jpg": {
+    "mtime": 1782337747.7184565,
+    "ast_hash": "1caf8abb0af85d8fd8d4196da6635b30",
+    "semantic_hash": "1caf8abb0af85d8fd8d4196da6635b30"
+  },
+  "images/hero-bg.jpg": {
+    "mtime": 1782428628.3334472,
+    "ast_hash": "1f9762fb2f8c258bc036a7ea1f5ea3de",
+    "semantic_hash": "1f9762fb2f8c258bc036a7ea1f5ea3de"
+  },
+  "images/logo.png": {
+    "mtime": 1782339891.9893837,
+    "ast_hash": "f15b4ba658ab8e97b2a4311d283995f9",
+    "semantic_hash": "f15b4ba658ab8e97b2a4311d283995f9"
+  },
+  "images/logo_dark.png": {
+    "mtime": 1782339920.022971,
+    "ast_hash": "c0e5e5df3cea9788a2f00fa451e3b156",
+    "semantic_hash": "c0e5e5df3cea9788a2f00fa451e3b156"
+  },
+  "images/logo_dark_lg.png": {
+    "mtime": 1782339920.088138,
+    "ast_hash": "228f8c62020346130437c10a33f05529",
+    "semantic_hash": "228f8c62020346130437c10a33f05529"
+  },
+  "images/logo_full.png": {
+    "mtime": 1782339892.042456,
+    "ast_hash": "eabdf9179ebaf62e1cb0f699a0b36277",
+    "semantic_hash": "eabdf9179ebaf62e1cb0f699a0b36277"
+  },
+  "images/logo_full_color.png": {
+    "mtime": 1782345974.3905334,
+    "ast_hash": "97684d2ba90247f18b2400a9a190ca4e",
+    "semantic_hash": "97684d2ba90247f18b2400a9a190ca4e"
+  },
+  "images/logos/AEDGE_PARTNERS.jpeg": {
+    "mtime": 1745826809.2694705,
+    "ast_hash": "799ee3f8daa48455435597dab1b9126f",
+    "semantic_hash": "799ee3f8daa48455435597dab1b9126f"
+  },
+  "images/logos/ALLIANCES.jpg": {
+    "mtime": 1597923583.9534943,
+    "ast_hash": "10f570e74e75f72972b14211ff74a87c",
+    "semantic_hash": "10f570e74e75f72972b14211ff74a87c"
+  },
+  "images/logos/ATTIJARI_WAFA_BANK.PNG": {
+    "mtime": 1524480791.906593,
+    "ast_hash": "0872a69e46e3bc346a8c498a17da8c42",
+    "semantic_hash": "0872a69e46e3bc346a8c498a17da8c42"
+  },
+  "images/logos/BANK_OF_AFRICA.jpg": {
+    "mtime": 1649259196.7245512,
+    "ast_hash": "e6a2937ecb17cc546cb6d2d3c7ec127a",
+    "semantic_hash": "e6a2937ecb17cc546cb6d2d3c7ec127a"
+  },
+  "images/logos/CIH.jpg": {
+    "mtime": 1584798454.1201758,
+    "ast_hash": "5eb24ac8f1c129e24d78cda52b232444",
+    "semantic_hash": "5eb24ac8f1c129e24d78cda52b232444"
+  },
+  "images/logos/CREDIT_DU_MAROC.jpg": {
+    "mtime": 1672831963.5350657,
+    "ast_hash": "60821b5030dcfe66d0d29f6ecfd47acb",
+    "semantic_hash": "60821b5030dcfe66d0d29f6ecfd47acb"
+  },
+  "images/logos/Domaines_agricoles.gif": {
+    "mtime": 1561569501.6072364,
+    "ast_hash": "a8f77ea32baf5675d0d8e6f6386b77f8",
+    "semantic_hash": "a8f77ea32baf5675d0d8e6f6386b77f8"
+  },
+  "images/logos/LAZRAK.png": {
+    "mtime": 1561569556.1303146,
+    "ast_hash": "e2f4aaba63dd74ead54c3cc0faebabcf",
+    "semantic_hash": "e2f4aaba63dd74ead54c3cc0faebabcf"
+  },
+  "images/logos/ONCORAD.png": {
+    "mtime": 1782420734.3306365,
+    "ast_hash": "4f6605504e6880a6b8713e054a5ef3f7",
+    "semantic_hash": "4f6605504e6880a6b8713e054a5ef3f7"
+  },
+  "images/logos/UMNIA_BANK.jpg": {
+    "mtime": 1531901919.948488,
+    "ast_hash": "1f950222fe7cc99b702bd9bc73dd05ff",
+    "semantic_hash": "1f950222fe7cc99b702bd9bc73dd05ff"
+  },
+  "images/logos/WAFA_ASSURANCE.jpg": {
+    "mtime": 1531902331.5387106,
+    "ast_hash": "02abf8312f7af061b0bf5d60d37a957f",
+    "semantic_hash": "02abf8312f7af061b0bf5d60d37a957f"
+  },
+  "images/logos/YAMED.png": {
+    "mtime": 1731406769.5418236,
+    "ast_hash": "54918e87097cc5a3c5ddc375917d296e",
+    "semantic_hash": "54918e87097cc5a3c5ddc375917d296e"
+  },
+  "images/logos/YASMINE_SIGNATURE.jpg": {
+    "mtime": 1647779081.972864,
+    "ast_hash": "af2b6dcfa5963417da53b91c9c1feba5",
+    "semantic_hash": "af2b6dcfa5963417da53b91c9c1feba5"
+  },
+  "images/logos/almada.jpg": {
+    "mtime": 1656678278.4888957,
+    "ast_hash": "a6ed1abba0b45ce2edef9a597594ced0",
+    "semantic_hash": "a6ed1abba0b45ce2edef9a597594ced0"
+  },
+  "images/logos/arena.jpg": {
+    "mtime": 1695138550.6921153,
+    "ast_hash": "d4b1698c9dbe6042302db89d738dccf7",
+    "semantic_hash": "d4b1698c9dbe6042302db89d738dccf7"
+  },
+  "images/logos/attijariwafa.png": {
+    "mtime": 1782420919.8012822,
+    "ast_hash": "0872a69e46e3bc346a8c498a17da8c42",
+    "semantic_hash": "0872a69e46e3bc346a8c498a17da8c42"
+  },
+  "images/logos/orange.png": {
+    "mtime": 1584813293.8637352,
+    "ast_hash": "e48eb6cbaf1f2d60d05efd3af5177bc5",
+    "semantic_hash": "e48eb6cbaf1f2d60d05efd3af5177bc5"
+  },
+  "images/logos/saham_bank.png": {
+    "mtime": 1782419226.1190972,
+    "ast_hash": "608fb537d41d4e40615d75bae498d458",
+    "semantic_hash": "608fb537d41d4e40615d75bae498d458"
+  },
+  "images/map_morocco.jpg": {
+    "mtime": 1782337747.82989,
+    "ast_hash": "ed007826d7fa592f6c26fb201d5a344e",
+    "semantic_hash": "ed007826d7fa592f6c26fb201d5a344e"
+  },
+  "images/map_morocco_clean.svg": {
+    "mtime": 1782343331.10317,
+    "ast_hash": "f0c50adba8136b62ccb68f1ccb13e934",
+    "semantic_hash": "f0c50adba8136b62ccb68f1ccb13e934"
+  },
+  "images/page-01.jpg": {
+    "mtime": 1782337624.9213853,
+    "ast_hash": "d9e339d20fe2470c1e42514e4ef06512",
+    "semantic_hash": "d9e339d20fe2470c1e42514e4ef06512"
+  },
+  "images/page-02.jpg": {
+    "mtime": 1782337625.0629034,
+    "ast_hash": "98eb00bae0295f4abcc34c5a34641c68",
+    "semantic_hash": "98eb00bae0295f4abcc34c5a34641c68"
+  },
+  "images/page-03.jpg": {
+    "mtime": 1782337625.1843138,
+    "ast_hash": "e65cff58ff994d254b3a6360f86aca70",
+    "semantic_hash": "e65cff58ff994d254b3a6360f86aca70"
+  },
+  "images/page-04.jpg": {
+    "mtime": 1782337625.296944,
+    "ast_hash": "e5a89e9fbed17a17e1f77fc3239aebae",
+    "semantic_hash": "e5a89e9fbed17a17e1f77fc3239aebae"
+  },
+  "images/page-05.jpg": {
+    "mtime": 1782337625.463159,
+    "ast_hash": "0f9398f2a9cd44f7dbce48fcfe93b110",
+    "semantic_hash": "0f9398f2a9cd44f7dbce48fcfe93b110"
+  },
+  "images/page-06.jpg": {
+    "mtime": 1782337625.6162896,
+    "ast_hash": "a3a4c5b7735d17b5cec1b118ed8796b0",
+    "semantic_hash": "a3a4c5b7735d17b5cec1b118ed8796b0"
+  },
+  "images/page-07.jpg": {
+    "mtime": 1782337625.7912686,
+    "ast_hash": "9bf89cb251f4a93f389d8d7b8f9a4c9a",
+    "semantic_hash": "9bf89cb251f4a93f389d8d7b8f9a4c9a"
+  },
+  "images/page-08.jpg": {
+    "mtime": 1782337625.97321,
+    "ast_hash": "3ab51698008ae54d5e640c4c651d6627",
+    "semantic_hash": "3ab51698008ae54d5e640c4c651d6627"
+  },
+  "images/page-09.jpg": {
+    "mtime": 1782337626.1090977,
+    "ast_hash": "50032521dc8b209c37b6ebe85908130c",
+    "semantic_hash": "50032521dc8b209c37b6ebe85908130c"
+  },
+  "images/page-10.jpg": {
+    "mtime": 1782337626.2454314,
+    "ast_hash": "d243221d5a7264eb2139f6190277e7aa",
+    "semantic_hash": "d243221d5a7264eb2139f6190277e7aa"
+  },
+  "images/page-11.jpg": {
+    "mtime": 1782337626.3958068,
+    "ast_hash": "76ea55f4a4d2ba11a934094aa08effee",
+    "semantic_hash": "76ea55f4a4d2ba11a934094aa08effee"
+  },
+  "images/page-12.jpg": {
+    "mtime": 1782337626.5457506,
+    "ast_hash": "6700395da4ab8699cabfa1517e21e58d",
+    "semantic_hash": "6700395da4ab8699cabfa1517e21e58d"
+  },
+  "images/page-13.jpg": {
+    "mtime": 1782337626.679876,
+    "ast_hash": "65142fc7121edcb63562fcff32ecc2e0",
+    "semantic_hash": "65142fc7121edcb63562fcff32ecc2e0"
+  },
+  "images/page-14.jpg": {
+    "mtime": 1782337626.8116612,
+    "ast_hash": "0886752ca10399fe804a1fc5bcc93be5",
+    "semantic_hash": "0886752ca10399fe804a1fc5bcc93be5"
+  },
+  "images/page-15.jpg": {
+    "mtime": 1782337626.997584,
+    "ast_hash": "41bc171603a4eae13db3b8646c13e2c0",
+    "semantic_hash": "41bc171603a4eae13db3b8646c13e2c0"
+  },
+  "images/page-16.jpg": {
+    "mtime": 1782337627.1585815,
+    "ast_hash": "35602291ce19248e175885dd1fad5262",
+    "semantic_hash": "35602291ce19248e175885dd1fad5262"
+  },
+  "images/page-17.jpg": {
+    "mtime": 1782337627.3808315,
+    "ast_hash": "4b0f99d583de79db73995c723d9165bd",
+    "semantic_hash": "4b0f99d583de79db73995c723d9165bd"
+  },
+  "images/page-18.jpg": {
+    "mtime": 1782337627.5558622,
+    "ast_hash": "d80350ce577b3037061688c77423b8c0",
+    "semantic_hash": "d80350ce577b3037061688c77423b8c0"
+  },
+  "images/page-19.jpg": {
+    "mtime": 1782337627.7090347,
+    "ast_hash": "78ca20b9357ddbefaa183c1cc38a5264",
+    "semantic_hash": "78ca20b9357ddbefaa183c1cc38a5264"
+  },
+  "images/page-20.jpg": {
+    "mtime": 1782337627.8666441,
+    "ast_hash": "a1bf19f2ce58938731b65a382808b14e",
+    "semantic_hash": "a1bf19f2ce58938731b65a382808b14e"
+  },
+  "images/page-21.jpg": {
+    "mtime": 1782337628.075154,
+    "ast_hash": "8c0e43888487428719d51070abb0e587",
+    "semantic_hash": "8c0e43888487428719d51070abb0e587"
+  },
+  "images/page-22.jpg": {
+    "mtime": 1782337628.2104237,
+    "ast_hash": "c905d8e70d0323477534278ac03f5bb1",
+    "semantic_hash": "c905d8e70d0323477534278ac03f5bb1"
+  },
+  "images/page-23.jpg": {
+    "mtime": 1782337628.3143141,
+    "ast_hash": "37b81be3fa112665e8830258e24102e0",
+    "semantic_hash": "37b81be3fa112665e8830258e24102e0"
+  },
+  "images/page-24.jpg": {
+    "mtime": 1782337628.4350884,
+    "ast_hash": "30fa267a7f5505307c9c273028670cc0",
+    "semantic_hash": "30fa267a7f5505307c9c273028670cc0"
+  },
+  "images/page-25.jpg": {
+    "mtime": 1782337628.5720465,
+    "ast_hash": "525f7e43aaeb3e23817d99971afcd992",
+    "semantic_hash": "525f7e43aaeb3e23817d99971afcd992"
+  },
+  "images/page-26.jpg": {
+    "mtime": 1782337628.7002406,
+    "ast_hash": "a0822680fcb55c9b0a962efecd3bad92",
+    "semantic_hash": "a0822680fcb55c9b0a962efecd3bad92"
+  },
+  "images/page-27.jpg": {
+    "mtime": 1782337628.8098276,
+    "ast_hash": "a69605a92f904e99a193ed7d0b4baab7",
+    "semantic_hash": "a69605a92f904e99a193ed7d0b4baab7"
+  },
+  "images/page-28.jpg": {
+    "mtime": 1782337628.9323113,
+    "ast_hash": "b8afe68d42d29a42107c9db7db8c0bb6",
+    "semantic_hash": "b8afe68d42d29a42107c9db7db8c0bb6"
+  },
+  "images/page-29.jpg": {
+    "mtime": 1782337629.0298185,
+    "ast_hash": "cff99a9b52dacf48862f7a32ddcb3b71",
+    "semantic_hash": "cff99a9b52dacf48862f7a32ddcb3b71"
+  },
+  "images/page-30.jpg": {
+    "mtime": 1782337629.1330545,
+    "ast_hash": "a9d5b73d3ab4d683df797d1d97ec1313",
+    "semantic_hash": "a9d5b73d3ab4d683df797d1d97ec1313"
+  },
+  "images/page-31.jpg": {
+    "mtime": 1782337629.257407,
+    "ast_hash": "22e86afe60897caa8b0e3c1927a4b766",
+    "semantic_hash": "22e86afe60897caa8b0e3c1927a4b766"
+  },
+  "images/page-32.jpg": {
+    "mtime": 1782337629.3924992,
+    "ast_hash": "9a056405a915fe62af6c5e0b74c0c9ad",
+    "semantic_hash": "9a056405a915fe62af6c5e0b74c0c9ad"
+  },
+  "images/page-33.jpg": {
+    "mtime": 1782337629.523665,
+    "ast_hash": "5d54e70d1950c571406bc84c712b6b05",
+    "semantic_hash": "5d54e70d1950c571406bc84c712b6b05"
+  },
+  "images/page-34.jpg": {
+    "mtime": 1782337629.58059,
+    "ast_hash": "e0044b1c6e387d5749080496699100b0",
+    "semantic_hash": "e0044b1c6e387d5749080496699100b0"
+  },
+  "images/page-35.jpg": {
+    "mtime": 1782337629.9086344,
+    "ast_hash": "b82ca1eb2d5271922a25423a581a6817",
+    "semantic_hash": "b82ca1eb2d5271922a25423a581a6817"
+  },
+  "images/page-36.jpg": {
+    "mtime": 1782337630.0422323,
+    "ast_hash": "a4d4bd816dbf0bf5d84b93e1fca41896",
+    "semantic_hash": "a4d4bd816dbf0bf5d84b93e1fca41896"
+  },
+  "images/page-37.jpg": {
+    "mtime": 1782337630.1589854,
+    "ast_hash": "e59ce02b79cfb55669a96b34c25208b5",
+    "semantic_hash": "e59ce02b79cfb55669a96b34c25208b5"
+  },
+  "images/page-38.jpg": {
+    "mtime": 1782337630.2896526,
+    "ast_hash": "29df33f5ef1aea8dd93faffde4662e17",
+    "semantic_hash": "29df33f5ef1aea8dd93faffde4662e17"
+  },
+  "images/page-39.jpg": {
+    "mtime": 1782337630.3949544,
+    "ast_hash": "2756518ac0bdca2154164ce92a75dba6",
+    "semantic_hash": "2756518ac0bdca2154164ce92a75dba6"
+  },
+  "images/page-40.jpg": {
+    "mtime": 1782337630.5173683,
+    "ast_hash": "6e0c07db258c893e5b82bec04b8aeb8a",
+    "semantic_hash": "6e0c07db258c893e5b82bec04b8aeb8a"
+  },
+  "images/page-41.jpg": {
+    "mtime": 1782337630.607754,
+    "ast_hash": "7756894895a81dfb975e18f70247643b",
+    "semantic_hash": "7756894895a81dfb975e18f70247643b"
+  },
+  "images/page-42.jpg": {
+    "mtime": 1782337630.7225807,
+    "ast_hash": "f914960c1bc4d898c8cffdf5b1c2e4f8",
+    "semantic_hash": "f914960c1bc4d898c8cffdf5b1c2e4f8"
+  },
+  "images/page-43.jpg": {
+    "mtime": 1782337630.8081682,
+    "ast_hash": "651e9c436598dd026dd3e4f86e3ea165",
+    "semantic_hash": "651e9c436598dd026dd3e4f86e3ea165"
+  },
+  "images/page-44.jpg": {
+    "mtime": 1782337630.8852782,
+    "ast_hash": "1f17141f3ac03b6b84908912d1a23bb3",
+    "semantic_hash": "1f17141f3ac03b6b84908912d1a23bb3"
+  },
+  "images/page-45.jpg": {
+    "mtime": 1782337630.9911094,
+    "ast_hash": "f79fb37d71e849179d4bf56a780a2ebd",
+    "semantic_hash": "f79fb37d71e849179d4bf56a780a2ebd"
+  },
+  "images/page-46.jpg": {
+    "mtime": 1782337631.0575836,
+    "ast_hash": "c648db81513714a54a8b8922a97357ec",
+    "semantic_hash": "c648db81513714a54a8b8922a97357ec"
+  },
+  "images/page-47.jpg": {
+    "mtime": 1782337631.134307,
+    "ast_hash": "646270b84cb5a673578cf8423cdfb679",
+    "semantic_hash": "646270b84cb5a673578cf8423cdfb679"
+  },
+  "images/page-48.jpg": {
+    "mtime": 1782337631.2095132,
+    "ast_hash": "0062746a1e6030f37a3222c50bec877d",
+    "semantic_hash": "0062746a1e6030f37a3222c50bec877d"
+  },
+  "images/project_p-07.jpg": {
+    "mtime": 1782337692.26725,
+    "ast_hash": "c3a49aa165f945924f40df5908e223a9",
+    "semantic_hash": "c3a49aa165f945924f40df5908e223a9"
+  },
+  "images/project_p-09.jpg": {
+    "mtime": 1782337692.4704044,
+    "ast_hash": "d36121f5bec4af823adcb4f271dfbe35",
+    "semantic_hash": "d36121f5bec4af823adcb4f271dfbe35"
+  },
+  "images/project_p-21.jpg": {
+    "mtime": 1782337692.7480352,
+    "ast_hash": "2f491ec1d51d98f8dc88812b35f6b039",
+    "semantic_hash": "2f491ec1d51d98f8dc88812b35f6b039"
+  },
+  "images/project_p-30.jpg": {
+    "mtime": 1782337692.901466,
+    "ast_hash": "139508be95f2bbed2543ecd88bf75b6b",
+    "semantic_hash": "139508be95f2bbed2543ecd88bf75b6b"
+  },
+  "images/project_p-35.jpg": {
+    "mtime": 1782337693.082501,
+    "ast_hash": "1a9164fd048816e188c80c68ec911540",
+    "semantic_hash": "1a9164fd048816e188c80c68ec911540"
+  },
+  "images/project_p-36.jpg": {
+    "mtime": 1782337693.2913287,
+    "ast_hash": "8b21a3045272171856b8487a82d1ed6d",
+    "semantic_hash": "8b21a3045272171856b8487a82d1ed6d"
+  },
+  "images/project_p-41.jpg": {
+    "mtime": 1782337693.4571216,
+    "ast_hash": "b04843284f5df07530596f89fa11e4f6",
+    "semantic_hash": "b04843284f5df07530596f89fa11e4f6"
+  },
+  "images/projects/akdital.jpg": {
+    "mtime": 1782337703.4321918,
+    "ast_hash": "300d5e49c39b0bf22b05b66614a0450e",
+    "semantic_hash": "300d5e49c39b0bf22b05b66614a0450e"
+  },
+  "images/projects/emsi_campus.jpg": {
+    "mtime": 1782337703.3719225,
+    "ast_hash": "0ed65a29c728c741187bb9ce6229b0a8",
+    "semantic_hash": "0ed65a29c728c741187bb9ce6229b0a8"
+  },
+  "images/projects/four_seasons.jpg": {
+    "mtime": 1782337703.621759,
+    "ast_hash": "d8eef4c3a668043618b97111f2c9d7c5",
+    "semantic_hash": "d8eef4c3a668043618b97111f2c9d7c5"
+  },
+  "images/projects/hyatt.jpg": {
+    "mtime": 1782337703.688283,
+    "ast_hash": "d1ca839921c74e729a4dc96451cb9f21",
+    "semantic_hash": "d1ca839921c74e729a4dc96451cb9f21"
+  },
+  "images/projects/igh_abidjan.jpg": {
+    "mtime": 1782337703.5566244,
+    "ast_hash": "79645282c716724772aaaef8bdfd8840",
+    "semantic_hash": "79645282c716724772aaaef8bdfd8840"
+  },
+  "images/projects/residentiel_bouskoura.jpg": {
+    "mtime": 1782337703.4900677,
+    "ast_hash": "e1e6b4f1cc1c1702602595921261912c",
+    "semantic_hash": "e1e6b4f1cc1c1702602595921261912c"
+  },
+  "images/projects/villa_saharai.jpg": {
+    "mtime": 1782337703.741457,
+    "ast_hash": "a824aa0ffc4b11219e3c33dd08ddd661",
+    "semantic_hash": "a824aa0ffc4b11219e3c33dd08ddd661"
+  },
+  "images/skyline_banner.jpg": {
+    "mtime": 1782337692.055307,
+    "ast_hash": "31698eb0cf284c980ad603e4527e0037",
+    "semantic_hash": "31698eb0cf284c980ad603e4527e0037"
+  },
+  "images/team/abderrazek_khattab.jpg": {
+    "mtime": 1782341861.9262972,
+    "ast_hash": "180fd2ecc4e584b1a8b34be49b4dbda2",
+    "semantic_hash": "180fd2ecc4e584b1a8b34be49b4dbda2"
+  },
+  "images/team/asmaa_ammi.jpg": {
+    "mtime": 1782341861.9350734,
+    "ast_hash": "c94eb9a920293a044c4ed0de6cbe853c",
+    "semantic_hash": "c94eb9a920293a044c4ed0de6cbe853c"
+  },
+  "images/team/aziza_el_gorte.jpg": {
+    "mtime": 1782341861.955691,
+    "ast_hash": "554142a37e421c98648d78cc2923afbe",
+    "semantic_hash": "554142a37e421c98648d78cc2923afbe"
+  },
+  "images/team/bouchaib_bourhil.jpg": {
+    "mtime": 1782341861.9712186,
+    "ast_hash": "9e03de77632b8b303faa0aef1ed4f7b8",
+    "semantic_hash": "9e03de77632b8b303faa0aef1ed4f7b8"
+  },
+  "images/team/ghizlane_hajji.jpg": {
+    "mtime": 1782341861.9851007,
+    "ast_hash": "cd862416c8dc8d954271fe679f76e9b0",
+    "semantic_hash": "cd862416c8dc8d954271fe679f76e9b0"
+  },
+  "images/team/hassan_bourquia.jpg": {
+    "mtime": 1782341862.0016596,
+    "ast_hash": "859f11ea5dfe2d6e1bd6cc12afa603d3",
+    "semantic_hash": "859f11ea5dfe2d6e1bd6cc12afa603d3"
+  },
+  "images/team/ibtissam_ouchahra.jpg": {
+    "mtime": 1782341862.018147,
+    "ast_hash": "f76db242b837ce97ba969a62b9332815",
+    "semantic_hash": "f76db242b837ce97ba969a62b9332815"
+  },
+  "images/team/kamal_ibouhouten.jpg": {
+    "mtime": 1782341862.034826,
+    "ast_hash": "cfdf1e9b6bdcc342fd96f05cd9dc1da7",
+    "semantic_hash": "cfdf1e9b6bdcc342fd96f05cd9dc1da7"
+  },
+  "images/team/said_chorfi.jpg": {
+    "mtime": 1782341862.0427988,
+    "ast_hash": "7abc928049778aef5a92f17bb59fb010",
+    "semantic_hash": "7abc928049778aef5a92f17bb59fb010"
+  },
+  "images/team/team_group.jpg": {
+    "mtime": 1782342338.4578173,
+    "ast_hash": "66662baa4d6eeac2cb45bce0c9da945e",
+    "semantic_hash": "66662baa4d6eeac2cb45bce0c9da945e"
+  },
+  "images/team/younes_chorfi.jpg": {
+    "mtime": 1782341862.0515301,
+    "ast_hash": "0f29dd030e90fe4ec0728343281913db",
+    "semantic_hash": "0f29dd030e90fe4ec0728343281913db"
+  }
+}

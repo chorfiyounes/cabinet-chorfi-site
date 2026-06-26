@@ -103,34 +103,26 @@ document.querySelectorAll('.section-eyebrow, .section-title, h2.section-title, .
     '560m²','4.15m','22.30m','75m²','9.00m','3.14m',
     '0.60m','14.80m','200m²','5.50m','11.25m','38m²'
   ];
-  function spawnHeroBgNums(container) {
-    container.innerHTML = '';
-    const shuffled = [...mesures].sort(() => Math.random() - .5);
-    shuffled.forEach((val, i) => {
-      const el = document.createElement('div');
-      el.className = 'hero-bg-num';
-      el.textContent = val;
-      el.style.left = (Math.random() * 88 + 2) + '%';
-      el.style.top = (Math.random() * 75 + 5) + '%';
-      el.style.fontSize = (12 + Math.random() * 11) + 'px';
-      const dur = (2.5 + Math.random() * 2).toFixed(2);
-      const delay = (i * 0.22).toFixed(2);
-      el.style.animation = `heroBgNumFall ${dur}s ${delay}s ease forwards`;
-      container.appendChild(el);
-    });
+  function spawnOneNum(container) {
+    const val = mesures[Math.floor(Math.random() * mesures.length)];
+    const el = document.createElement('div');
+    el.className = 'hero-bg-num';
+    el.textContent = val;
+    el.style.left = (Math.random() * 88 + 2) + '%';
+    el.style.top = (Math.random() * 75 + 5) + '%';
+    el.style.fontSize = (13 + Math.random() * 10) + 'px';
+    const dur = (3 + Math.random() * 2).toFixed(2);
+    el.style.animation = `heroBgNumFall ${dur}s ease forwards`;
+    container.appendChild(el);
+    setTimeout(() => { if (el.parentNode) el.parentNode.removeChild(el); }, (parseFloat(dur) + 0.2) * 1000);
   }
-  // index.html hero
+  function startHeroNums(container) {
+    for (let i = 0; i < 4; i++) setTimeout(() => spawnOneNum(container), i * 250);
+    setInterval(() => spawnOneNum(container), 450);
+  }
   const heroBg = document.getElementById('heroBgNums');
-  if (heroBg) {
-    spawnHeroBgNums(heroBg);
-    setInterval(() => spawnHeroBgNums(heroBg), 7000);
-  }
-  // other pages: page-hero
-  const pageHeroBgs = document.querySelectorAll('.page-hero .hero-bg-nums');
-  pageHeroBgs.forEach(bg => {
-    spawnHeroBgNums(bg);
-    setInterval(() => spawnHeroBgNums(bg), 7000);
-  });
+  if (heroBg) startHeroNums(heroBg);
+  document.querySelectorAll('.page-hero .hero-bg-nums').forEach(bg => startHeroNums(bg));
 })();
 
 // 3b. Falling measures background on stats section

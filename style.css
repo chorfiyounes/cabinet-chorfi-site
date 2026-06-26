@@ -218,7 +218,7 @@ body.nav-open .burger span:nth-child(3) { transform: rotate(-45deg) translate(5p
 .hero-bg-num {
   position: absolute;
   font-family: monospace;
-  color: rgba(184,150,46,0.12);
+  color: rgba(184,150,46,0.25);
   font-weight: 700;
   opacity: 0;
 }
