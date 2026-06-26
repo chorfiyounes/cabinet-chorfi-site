@@ -175,7 +175,7 @@ ul { list-style: none; }
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   position: relative;
   background: var(--navy);
   padding-top: var(--nav-h);
@@ -198,9 +198,13 @@ ul { list-style: none; }
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 740px;
+  flex: 0 0 55%;
+  max-width: 55%;
   padding: 80px 32px;
   margin-left: max(32px, calc((100vw - var(--max-w)) / 2));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-eyebrow {
@@ -276,13 +280,11 @@ ul { list-style: none; }
 .hero-overlay { display: none; }
 
 .hero-photo {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 45%;
-  height: 100%;
+  flex: 1;
+  position: relative;
   z-index: 1;
   overflow: hidden;
+  min-height: 400px;
 }
 .hero-photo::before {
   content: '';
