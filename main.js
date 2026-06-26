@@ -22,6 +22,10 @@ if (burger) {
       document.body.classList.remove('nav-open');
     }
   });
+  // Close when a nav link is clicked
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => document.body.classList.remove('nav-open'));
+  });
 }
 
 // Project filter tabs
