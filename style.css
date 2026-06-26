@@ -313,6 +313,25 @@ body.nav-open .burger span:nth-child(3) { transform: rotate(-45deg) translate(5p
 /* ===========================
    STATS
    =========================== */
+.stats-bg-nums {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.stats-bg-num {
+  position: absolute;
+  font-family: monospace;
+  color: rgba(184,150,46,0.13);
+  font-weight: 700;
+  opacity: 0;
+}
+@keyframes statNumFall {
+  0%   { opacity: 0; transform: translateY(-28px); }
+  20%  { opacity: 1; }
+  75%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(10px); }
+}
 .stats {
   background: var(--navy);
   padding: 64px 0;

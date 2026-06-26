@@ -95,6 +95,40 @@ document.querySelectorAll('.section-eyebrow, .section-title, h2.section-title, .
   revealObserver.observe(el);
 });
 
+// 3b. Falling measures background on stats section
+const statsBg = document.getElementById('statsBgNums');
+if (statsBg) {
+  const mesures = [
+    '12.50m','3.60m²','248m²','6.80m','0.90m','18.00m',
+    '45.20m²','2.40m','107m²','33.75m','8.50m','1.20m',
+    '560m²','4.15m','22.30m','75m²','9.00m','3.14m',
+    '0.60m','14.80m','200m²','5.50m','11.25m','38m²'
+  ];
+  function spawnMesures() {
+    statsBg.innerHTML = '';
+    const shuffled = [...mesures].sort(() => Math.random() - .5);
+    shuffled.forEach((val, i) => {
+      const el = document.createElement('div');
+      el.className = 'stats-bg-num';
+      el.textContent = val;
+      el.style.left = (Math.random() * 88 + 2) + '%';
+      el.style.top = (Math.random() * 65 + 8) + '%';
+      el.style.fontSize = (11 + Math.random() * 9) + 'px';
+      const dur = (2.2 + Math.random() * 1.5).toFixed(2);
+      const delay = (i * 0.18).toFixed(2);
+      el.style.animation = `statNumFall ${dur}s ${delay}s ease forwards`;
+      statsBg.appendChild(el);
+    });
+  }
+  const statsSection = document.querySelector('.stats');
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) spawnMesures();
+    });
+  }, { threshold: 0.3 });
+  if (statsSection) statsObserver.observe(statsSection);
+}
+
 // 3. Animated counters
 function animateCounter(el, target, suffix) {
   const duration = 1400;
