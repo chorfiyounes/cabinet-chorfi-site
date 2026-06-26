@@ -215,16 +215,17 @@ ul { list-style: none; }
 .hero-title {
   font-family: var(--font-serif);
   font-size: clamp(26px, 3.2vw, 48px);
-  font-weight: 300;
+  font-weight: 600;
   line-height: 0.95;
   color: var(--white);
   margin-bottom: 32px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0em;
 }
 
 .hero-subtitle {
   font-family: var(--font-serif);
   font-size: 20px;
+  font-weight: 600;
   line-height: 1.75;
   color: rgba(255,255,255,0.55);
   max-width: 520px;
