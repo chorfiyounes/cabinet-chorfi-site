@@ -1195,8 +1195,8 @@ footer {
 .projects-table tr:hover { background: var(--cream); }
 
 .projects-table td {
-  padding: 16px 12px;
-  font-size: 17px;
+  padding: 10px 12px;
+  font-size: 14px;
   color: var(--gray-700);
 }
 
