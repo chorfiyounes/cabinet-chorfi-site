@@ -46,8 +46,9 @@
 <!-- FILTRES -->
 <div class="projects-filter">
   <div class="container">
+    <!-- Boutons desktop -->
     <div class="filter-tabs">
-            <button class="filter-tab active" data-filter="all">Tous</button>
+      <button class="filter-tab active" data-filter="all">Tous</button>
       <button class="filter-tab" data-filter="education">Éducation</button>
       <button class="filter-tab" data-filter="sante">Santé</button>
       <button class="filter-tab" data-filter="institutions">Institutions</button>
@@ -59,6 +60,27 @@
       <button class="filter-tab" data-filter="public">Bâtiments Publics</button>
       <button class="filter-tab" data-filter="industrie">Industrie</button>
       <button class="filter-tab" data-filter="showrooms">Show-rooms</button>
+    </div>
+    <!-- Menu déroulant mobile -->
+    <div class="filter-dropdown" id="filterDropdown">
+      <button class="filter-dropdown-btn" id="filterDropdownBtn" onclick="toggleFilterDropdown()">
+        <span id="filterDropdownLabel">Tous les projets</span>
+        <span class="filter-dropdown-arrow">▾</span>
+      </button>
+      <div class="filter-dropdown-menu" id="filterDropdownMenu">
+        <button onclick="selectDropdownFilter('all', 'Tous les projets', this)" class="filter-dropdown-item active">Tous les projets</button>
+        <button onclick="selectDropdownFilter('education', 'Éducation', this)" class="filter-dropdown-item">Éducation</button>
+        <button onclick="selectDropdownFilter('sante', 'Santé', this)" class="filter-dropdown-item">Santé</button>
+        <button onclick="selectDropdownFilter('institutions', 'Institutions', this)" class="filter-dropdown-item">Institutions</button>
+        <button onclick="selectDropdownFilter('residentiel', 'Résidentiel', this)" class="filter-dropdown-item">Résidentiel</button>
+        <button onclick="selectDropdownFilter('bureaux', 'Bureaux', this)" class="filter-dropdown-item">Bureaux</button>
+        <button onclick="selectDropdownFilter('igh', 'IGH', this)" class="filter-dropdown-item">IGH</button>
+        <button onclick="selectDropdownFilter('hotellerie', 'Hôtellerie', this)" class="filter-dropdown-item">Hôtellerie</button>
+        <button onclick="selectDropdownFilter('commerces', 'Boutiques &amp; Commerces', this)" class="filter-dropdown-item">Boutiques &amp; Commerces</button>
+        <button onclick="selectDropdownFilter('public', 'Bâtiments Publics', this)" class="filter-dropdown-item">Bâtiments Publics</button>
+        <button onclick="selectDropdownFilter('industrie', 'Industrie', this)" class="filter-dropdown-item">Industrie</button>
+        <button onclick="selectDropdownFilter('showrooms', 'Show-rooms', this)" class="filter-dropdown-item">Show-rooms</button>
+      </div>
     </div>
   </div>
 </div>
@@ -1322,18 +1344,48 @@
     next.addEventListener('click', e => { e.stopPropagation(); go(current + 1); });
   });
 
-  // Filtre projets phares
+  // Filtre projets phares (desktop tabs)
   const tabs = document.querySelectorAll('.filter-tab');
   const cards = document.querySelectorAll('.phare-card');
+
+  function applyFilter(filter) {
+    cards.forEach(card => {
+      card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'block' : 'none';
+    });
+  }
+
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-      const filter = tab.dataset.filter;
-      cards.forEach(card => {
-        card.style.display = (filter === 'all' || card.dataset.category === filter) ? 'block' : 'none';
-      });
+      applyFilter(tab.dataset.filter);
     });
+  });
+
+  // Dropdown mobile
+  function toggleFilterDropdown() {
+    const menu = document.getElementById('filterDropdownMenu');
+    const btn = document.getElementById('filterDropdownBtn');
+    menu.classList.toggle('open');
+    btn.classList.toggle('open');
+  }
+
+  function selectDropdownFilter(filter, label, el) {
+    document.getElementById('filterDropdownLabel').textContent = label;
+    document.querySelectorAll('.filter-dropdown-item').forEach(i => i.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('filterDropdownMenu').classList.remove('open');
+    document.getElementById('filterDropdownBtn').classList.remove('open');
+    applyFilter(filter);
+  }
+
+  // Fermer dropdown si clic extérieur
+  document.addEventListener('click', function(e) {
+    const dd = document.getElementById('filterDropdown');
+    if (dd && !dd.contains(e.target)) {
+      document.getElementById('filterDropdownMenu').classList.remove('open');
+      document.getElementById('filterDropdownBtn').classList.remove('open');
+    }
   });
 </script>
 <a href="https://wa.me/212661728125" class="whatsapp-float" target="_blank" title="WhatsApp">
