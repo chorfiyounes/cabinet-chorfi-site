@@ -1424,14 +1424,14 @@ footer {
 
 .filter-tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 0;
-  overflow-x: auto;
 }
 
 .filter-tab {
-  padding: 14px 24px;
-  font-size: 12px;
-  letter-spacing: 0.08em;
+  padding: 10px 16px;
+  font-size: 10px;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--gray-500);
   cursor: pointer;
