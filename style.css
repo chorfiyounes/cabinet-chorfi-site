@@ -103,15 +103,15 @@ ul { list-style: none; }
 
 .nav-links {
   display: flex;
-  gap: 32px;
+  gap: 16px;
   margin-left: auto;
 }
 .nav-links a {
   color: var(--gray-500);
   font-family: var(--font-serif);
-  font-size: 17px;
+  font-size: 13px;
   font-weight: 400;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   transition: color var(--transition);
   position: relative;
   padding-bottom: 4px;
