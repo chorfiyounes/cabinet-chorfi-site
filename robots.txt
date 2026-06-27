@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://chorfiyounes.github.io/cabinet-chorfi-site/sitemap.xml
+Sitemap: https://metreurchorfi.com/sitemap.xml
