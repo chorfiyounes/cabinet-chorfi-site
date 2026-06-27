@@ -60,4 +60,16 @@
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://metreurchorfi.com/blog/etapes-projet-construction-maroc.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://metreurchorfi.com/blog/importance-metreur-economiste-construction.html</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
