@@ -164,6 +164,63 @@
   </div>
 </section>
 
+<!-- CANDIDATURE SPONTANÉE -->
+<section style="padding:80px 0 100px;border-top:1px solid var(--gray-100);">
+  <div class="container">
+    <p style="font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:12px;">Rejoindre l'équipe</p>
+    <h2 style="font-family:var(--font-serif);font-size:clamp(26px,4vw,38px);font-weight:300;color:var(--navy);margin-bottom:12px;line-height:1.2;">Candidature spontanée</h2>
+    <p style="font-size:16px;color:var(--gray-500);line-height:1.7;margin-bottom:40px;max-width:540px;">Vous souhaitez intégrer le Cabinet CHORFI ? Envoyez-nous votre dossier — nous étudions chaque candidature avec attention.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;max-width:680px;">
+      <div style="background:var(--cream);border:1px solid var(--gray-100);border-radius:12px;padding:20px 24px;">
+        <p style="font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray-400);margin-bottom:6px;">Profils recherchés</p>
+        <p style="font-size:14px;color:var(--dark);font-weight:500;line-height:1.5;">Métreurs, économistes de la construction, techniciens BTP</p>
+      </div>
+      <div style="background:var(--cream);border:1px solid var(--gray-100);border-radius:12px;padding:20px 24px;">
+        <p style="font-size:10px;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray-400);margin-bottom:6px;">Localisation</p>
+        <p style="font-size:14px;color:var(--dark);font-weight:500;line-height:1.5;">Casablanca, Maroc<br><span style="font-size:12px;color:var(--gray-400);font-weight:400;">Présentiel uniquement</span></p>
+      </div>
+    </div>
+
+    <form id="candidatureForm" onsubmit="handleCandidature(event)" style="max-width:680px;background:var(--cream);border:1px solid var(--gray-100);border-radius:12px;padding:32px;">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cand_name">Nom complet *</label>
+          <input type="text" id="cand_name" name="cand_name" required placeholder="Votre nom" />
+        </div>
+        <div class="form-group">
+          <label for="cand_email">Email *</label>
+          <input type="email" id="cand_email" name="cand_email" required placeholder="votre@email.com" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="cand_phone">Téléphone</label>
+          <input type="tel" id="cand_phone" name="cand_phone" placeholder="+212 6 XX XX XX XX" />
+        </div>
+        <div class="form-group">
+          <label for="cand_poste">Poste souhaité</label>
+          <input type="text" id="cand_poste" name="cand_poste" placeholder="Ex : Métreur vérificateur" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cand_message">Lettre de motivation *</label>
+        <textarea id="cand_message" name="cand_message" required placeholder="Présentez-vous et dites-nous ce qui vous attire dans notre cabinet…"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="cand_exp">Expérience</label>
+        <input type="text" id="cand_exp" name="cand_exp" placeholder="Ex : 5 ans en métrés de bâtiment" />
+        <p style="font-size:12px;color:var(--gray-400);margin-top:4px;">Joignez votre CV en pièce jointe dans l'email qui s'ouvrira</p>
+      </div>
+      <p class="form-note">Toutes vos informations sont confidentielles.</p>
+      <button type="submit" class="btn-primary">Envoyer ma candidature →</button>
+      <div id="cand-success" style="display:none;padding:16px;background:#f0f7f0;border-left:3px solid #25a25a;margin-top:12px;font-size:14px;color:#1a5c2a;">
+        ✓ Candidature envoyée. Nous reviendrons vers vous rapidement.
+      </div>
+    </form>
+  </div>
+</section>
+
 <footer>
   <div class="container">
     <div class="footer-grid">

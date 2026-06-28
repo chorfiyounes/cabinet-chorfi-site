@@ -187,6 +187,26 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
 
+// Candidature spontanée
+function handleCandidature(e) {
+  e.preventDefault();
+  const form = e.target;
+  const name = form.querySelector('#cand_name').value;
+  const email = form.querySelector('#cand_email').value;
+  const phone = form.querySelector('#cand_phone').value;
+  const poste = form.querySelector('#cand_poste').value;
+  const message = form.querySelector('#cand_message').value;
+  const exp = form.querySelector('#cand_exp').value;
+  const subject = encodeURIComponent('Candidature spontanée — Cabinet CHORFI');
+  const body = encodeURIComponent(
+    `Nom : ${name}\nEmail : ${email}\nTéléphone : ${phone}\nPoste souhaité : ${poste}\nExpérience : ${exp}\n\nLettre de motivation :\n${message}\n\n(CV en pièce jointe)`
+  );
+  window.location.href = `mailto:chorfi.younes@gmail.com?subject=${subject}&body=${body}`;
+  const success = document.getElementById('cand-success');
+  if (success) success.style.display = 'block';
+  form.reset();
+}
+
 // === PROTECTION PHOTOS ===
 document.addEventListener('contextmenu', (e) => {
   if (e.target.tagName === 'IMG') e.preventDefault();
