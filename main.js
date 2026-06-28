@@ -186,3 +186,91 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
+
+// === LIGHTBOX + PROTECTION PHOTOS ===
+(function() {
+  function getImages(phareImg) {
+    const base = phareImg.dataset.base;
+    const count = parseInt(phareImg.dataset.count || '1');
+    if (base && count > 0) {
+      return Array.from({length: count}, (_, i) =>
+        base + 'photo_' + String(i + 1).padStart(3, '0') + '.jpg'
+      );
+    }
+    const img = phareImg.querySelector('img');
+    return img ? [img.src] : [];
+  }
+
+  const lb = document.createElement('div');
+  lb.id = 'lightbox';
+  lb.innerHTML = `
+    <div class="lb-overlay"></div>
+    <div class="lb-content">
+      <button class="lb-close" aria-label="Fermer">&#x2715;</button>
+      <button class="lb-prev" aria-label="Précédent">&#8249;</button>
+      <div class="lb-img-wrap">
+        <img class="lb-img" src="" alt="" draggable="false" />
+        <div class="lb-img-shield"></div>
+      </div>
+      <button class="lb-next" aria-label="Suivant">&#8250;</button>
+      <div class="lb-counter"></div>
+    </div>
+  `;
+  document.body.appendChild(lb);
+
+  let images = [], idx = 0;
+
+  function showImg(i) {
+    idx = (i + images.length) % images.length;
+    lb.querySelector('.lb-img').src = images[idx];
+    const hasMult = images.length > 1;
+    lb.querySelector('.lb-prev').style.display = hasMult ? '' : 'none';
+    lb.querySelector('.lb-next').style.display = hasMult ? '' : 'none';
+    lb.querySelector('.lb-counter').textContent = hasMult ? (idx + 1) + ' / ' + images.length : '';
+  }
+
+  function openLb(phareImg) {
+    images = getImages(phareImg);
+    if (!images.length) return;
+    showImg(0);
+    lb.classList.add('lb-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLb() {
+    lb.classList.remove('lb-open');
+    document.body.style.overflow = '';
+    setTimeout(() => { lb.querySelector('.lb-img').src = ''; }, 300);
+  }
+
+  lb.querySelector('.lb-close').addEventListener('click', closeLb);
+  lb.querySelector('.lb-overlay').addEventListener('click', closeLb);
+  lb.querySelector('.lb-prev').addEventListener('click', () => showImg(idx - 1));
+  lb.querySelector('.lb-next').addEventListener('click', () => showImg(idx + 1));
+
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('lb-open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft') showImg(idx - 1);
+    if (e.key === 'ArrowRight') showImg(idx + 1);
+  });
+
+  let touchStartX = 0;
+  lb.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, {passive: true});
+  lb.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 50) showImg(dx < 0 ? idx + 1 : idx - 1);
+  });
+
+  document.querySelectorAll('.phare-img').forEach(phareImg => {
+    phareImg.addEventListener('click', () => openLb(phareImg));
+  });
+
+  // Protection : bloquer clic droit sur toutes les images du site
+  document.addEventListener('contextmenu', (e) => {
+    if (e.target.tagName === 'IMG') e.preventDefault();
+  });
+  document.addEventListener('dragstart', (e) => {
+    if (e.target.tagName === 'IMG') e.preventDefault();
+  });
+})();
