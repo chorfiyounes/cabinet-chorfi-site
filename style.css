@@ -2001,15 +2001,18 @@ footer {
 }
 #intro-diag {
   position: fixed;
-  inset: 0;
+  top: -5%;
+  left: -10%;
+  width: 130%;
+  height: 115%;
   background: #F2EFE8;
   z-index: 99998;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  transition: clip-path 0.75s cubic-bezier(0.77, 0, 0.175, 1);
+  transform: translateX(0) skewX(-4deg);
+  transition: transform 0.75s cubic-bezier(0.77, 0, 0.175, 1);
   pointer-events: none;
 }
 #intro-diag.open {
-  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  transform: translateX(115%) skewX(-4deg);
 }
 
 @media (max-width: 480px) {
