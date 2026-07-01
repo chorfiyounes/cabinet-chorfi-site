@@ -2,13 +2,14 @@
 (function() {
   const overlay = document.getElementById('intro-overlay');
   if (!overlay) return;
-  const logo = document.getElementById('intro-logo');
-  const bar = document.getElementById('intro-metre-bar');
-  const cL = document.getElementById('intro-curtain-left');
-  const cR = document.getElementById('intro-curtain-right');
+  const logo    = document.getElementById('intro-logo');
+  const tape    = document.getElementById('intro-tape-outer');
+  const boitier = document.getElementById('intro-boitier');
+  const cL      = document.getElementById('intro-curtain-left');
+  const cR      = document.getElementById('intro-curtain-right');
 
   setTimeout(() => logo.classList.add('show'), 200);
-  setTimeout(() => bar.classList.add('open'), 700);
+  setTimeout(() => tape.classList.add('open'), 700);
   setTimeout(() => {
     overlay.style.transition = 'opacity 0.35s ease';
     overlay.style.opacity = '0';
@@ -17,7 +18,7 @@
       cL.classList.add('open');
       cR.classList.add('open');
     }, 380);
-  }, 1900);
+  }, 2000);
 })();
 
 // Navigation scroll effect

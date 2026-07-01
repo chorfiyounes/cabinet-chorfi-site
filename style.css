@@ -1913,70 +1913,92 @@ footer {
 #intro-metre-wrap {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0;
 }
-#intro-reel {
-  width: 34px;
-  height: 34px;
-  background: #2C3E6B;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-#intro-reel::after {
-  content: '';
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #B8973A;
-  display: block;
-}
-#intro-metre-track {
+#intro-boitier {
+  width: 64px;
+  height: 60px;
+  background: linear-gradient(145deg, #f5c842 0%, #e0a800 60%, #c8920a 100%);
+  border-radius: 10px 4px 4px 10px;
   position: relative;
-  width: 260px;
-  height: 28px;
+  box-shadow: inset -3px -3px 6px rgba(0,0,0,0.25), inset 2px 2px 4px rgba(255,255,255,0.3), 2px 2px 6px rgba(0,0,0,0.3);
+  flex-shrink: 0;
+  z-index: 2;
 }
-#intro-metre-bar {
+#intro-boitier::before {
+  content: 'CHORFI';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7px;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  color: rgba(0,0,0,0.45);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+#intro-boitier::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 6px;
+  background: #c8920a;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+}
+#intro-boitier-slot {
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 22px;
+  background: #222;
+  border-radius: 0 1px 1px 0;
+}
+#intro-tape-outer {
+  position: relative;
+  height: 22px;
+  width: 0;
+  overflow: hidden;
+  transition: width 1.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+#intro-tape-outer.open { width: 280px; }
+#intro-tape {
   position: absolute;
   top: 0;
   left: 0;
-  height: 28px;
-  width: 0;
-  background: #E8C547;
-  border-radius: 0 3px 3px 0;
-  overflow: hidden;
-  transition: width 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  box-shadow: inset 0 -3px 0 rgba(0,0,0,0.12);
+  height: 22px;
+  width: 280px;
+  background: #FAD824;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2), inset 0 -2px 0 rgba(0,0,0,0.08);
 }
-#intro-metre-bar.open { width: 260px; }
-.intro-stripe {
+#intro-tape::after {
+  content: '';
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(90deg, transparent 0, transparent 8px, rgba(0,0,0,0.07) 8px, rgba(0,0,0,0.07) 9px);
+  background: repeating-linear-gradient(90deg, transparent 0px, transparent 4px, rgba(0,0,0,0.18) 4px, rgba(0,0,0,0.18) 5px);
 }
-.intro-tick {
-  position: absolute;
-  bottom: 0;
-  width: 1px;
-  background: rgba(0,0,0,0.3);
-}
-.intro-num {
-  position: absolute;
-  top: 4px;
-  font-size: 7px;
-  font-family: monospace;
-  color: rgba(0,0,0,0.5);
-  font-weight: 700;
-}
-#intro-metre-end {
+#intro-tape-svg {
   position: absolute;
   top: 0;
+  left: 0;
+  width: 280px;
+  height: 22px;
+}
+#intro-crochet {
+  position: absolute;
   right: 0;
-  width: 12px;
-  height: 28px;
-  background: #c49a20;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 22px;
+  background: linear-gradient(90deg, #bbb 0%, #888 50%, #aaa 100%);
+  border: 0.5px solid #666;
 }
 #intro-curtain-left,
 #intro-curtain-right {
@@ -1995,11 +2017,12 @@ footer {
 #intro-curtain-right.open { transform: translateX(100%); }
 
 @media (max-width: 480px) {
-  #intro-logo img { width: 160px; }
-  #intro-metre-track { width: 180px; }
-  #intro-metre-bar.open { width: 180px; }
-  #intro-reel { width: 28px; height: 28px; }
-  #intro-reel::after { width: 11px; height: 11px; }
-  .intro-tick:nth-child(n+7) { display: none; }
-  .intro-num { font-size: 6px; }
+  #intro-logo img { width: 150px; }
+  #intro-boitier { width: 48px; height: 44px; }
+  #intro-boitier-slot { height: 16px; }
+  #intro-tape-outer.open { width: 190px; }
+  #intro-tape { width: 190px; height: 16px; }
+  #intro-tape-svg { width: 190px; height: 16px; }
+  #intro-crochet { height: 16px; width: 8px; }
+  #intro-tape-outer { height: 16px; }
 }
