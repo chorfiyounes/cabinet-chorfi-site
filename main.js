@@ -1,3 +1,35 @@
+// ===== ANIMATION D'OUVERTURE =====
+(function() {
+  const overlay = document.getElementById('intro-overlay');
+  if (!overlay) return;
+  const logo = document.getElementById('intro-logo');
+  const bar = document.getElementById('intro-metre-bar');
+  const cL = document.getElementById('intro-curtain-left');
+  const cR = document.getElementById('intro-curtain-right');
+
+  setTimeout(() => logo.classList.add('show'), 200);
+  setTimeout(() => bar.classList.add('open'), 700);
+  setTimeout(() => {
+    overlay.style.transition = 'opacity 0.35s ease';
+    overlay.style.opacity = '0';
+    setTimeout(() => {
+      overlay.style.display = 'none';
+      cL.style.display = 'block';
+      cR.style.display = 'block';
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          cL.classList.add('open');
+          cR.classList.add('open');
+          setTimeout(() => {
+            cL.style.display = 'none';
+            cR.style.display = 'none';
+          }, 750);
+        });
+      });
+    }, 380);
+  }, 1900);
+})();
+
 // Navigation scroll effect
 const navbar = document.getElementById('navbar');
 if (navbar) {
