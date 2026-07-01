@@ -14,18 +14,8 @@
     overlay.style.opacity = '0';
     setTimeout(() => {
       overlay.style.display = 'none';
-      cL.style.display = 'block';
-      cR.style.display = 'block';
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          cL.classList.add('open');
-          cR.classList.add('open');
-          setTimeout(() => {
-            cL.style.display = 'none';
-            cR.style.display = 'none';
-          }, 750);
-        });
-      });
+      cL.classList.add('open');
+      cR.classList.add('open');
     }, 380);
   }, 1900);
 })();
