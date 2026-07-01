@@ -5,8 +5,7 @@
   const logo    = document.getElementById('intro-logo');
   const tape    = document.getElementById('intro-tape-outer');
   const boitier = document.getElementById('intro-boitier');
-  const cL      = document.getElementById('intro-curtain-left');
-  const cR      = document.getElementById('intro-curtain-right');
+  const diag    = document.getElementById('intro-diag');
 
   setTimeout(() => logo.classList.add('show'), 200);
   setTimeout(() => tape.classList.add('open'), 700);
@@ -15,8 +14,7 @@
     overlay.style.opacity = '0';
     setTimeout(() => {
       overlay.style.display = 'none';
-      cL.classList.add('open');
-      cR.classList.add('open');
+      diag.classList.add('open');
     }, 380);
   }, 2000);
 })();
