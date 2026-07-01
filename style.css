@@ -1994,3 +1994,13 @@ footer {
 #intro-curtain-right { right: 0; box-shadow: -3px 0 20px rgba(0,0,0,0.12); }
 #intro-curtain-left.open { transform: translateX(-100%); }
 #intro-curtain-right.open { transform: translateX(100%); }
+
+@media (max-width: 480px) {
+  #intro-logo img { width: 160px; }
+  #intro-metre-track { width: 180px; }
+  #intro-metre-bar.open { width: 180px; }
+  #intro-reel { width: 28px; height: 28px; }
+  #intro-reel::after { width: 11px; height: 11px; }
+  .intro-tick:nth-child(n+7) { display: none; }
+  .intro-num { font-size: 6px; }
+}
