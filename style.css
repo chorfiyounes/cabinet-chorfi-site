@@ -10,7 +10,7 @@
   --cream:     #FAF8F4;
   --beige:     #F0EDE6;
   --white:     #FFFFFF;
-  --gold:      #B8962E;
+  --gold:      #8A6E14;
   --gold-light:#D4AF5A;
   --gray-700:  #4B5563;
   --gray-500:  #6B7280;
@@ -39,6 +39,15 @@ body {
 a { color: inherit; text-decoration: none; }
 img { max-width: 100%; display: block; }
 ul { list-style: none; }
+
+/* Accessibilité — indicateur de focus clavier visible (WCAG 2.4.7) */
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+/* Ne pas afficher l'anneau au clic souris, seulement au clavier */
+:focus:not(:focus-visible) { outline: none; }
 
 .container {
   max-width: var(--max-w);
@@ -163,7 +172,11 @@ ul { list-style: none; }
 .burger {
   display: none;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
+  min-width: 44px;
+  min-height: 44px;
   padding: 4px;
   background: none;
   border: none;
@@ -1725,6 +1738,8 @@ footer {
 .form-group textarea:focus {
   border-color: var(--gold);
   background: var(--white);
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
 }
 
 .form-group textarea { height: 140px; resize: vertical; }
