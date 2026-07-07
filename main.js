@@ -1,11 +1,22 @@
+// Respect du réglage « réduire les animations » (WCAG 2.3.3)
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 // ===== ANIMATION D'OUVERTURE =====
 (function() {
   const overlay = document.getElementById('intro-overlay');
   if (!overlay) return;
+  const diag    = document.getElementById('intro-diag');
+
+  // Utilisateurs sensibles : on affiche le site immédiatement, sans animation
+  if (reduceMotion) {
+    overlay.style.display = 'none';
+    if (diag) diag.classList.add('open');
+    return;
+  }
+
   const logo    = document.getElementById('intro-logo');
   const tape    = document.getElementById('intro-tape-outer');
   const boitier = document.getElementById('intro-boitier');
-  const diag    = document.getElementById('intro-diag');
 
   setTimeout(() => logo.classList.add('show'), 200);
   setTimeout(() => tape.classList.add('open'), 700);
@@ -161,6 +172,7 @@ document.querySelectorAll('.section-eyebrow, .section-title, h2.section-title, .
     for (let i = 0; i < 4; i++) setTimeout(() => spawnOneNum(container), i * 250);
     setInterval(() => spawnOneNum(container), 450);
   }
+  if (reduceMotion) return; // pas d'animation en boucle si réduction demandée
   const heroBg = document.getElementById('heroBgNums');
   if (heroBg) startHeroNums(heroBg);
   document.querySelectorAll('.page-hero .hero-bg-nums').forEach(bg => startHeroNums(bg));
@@ -194,7 +206,7 @@ if (statsBg) {
   const statsSection = document.querySelector('.stats');
   const statsObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) spawnMesures();
+      if (entry.isIntersecting && !reduceMotion) spawnMesures();
     });
   }, { threshold: 0.3 });
   if (statsSection) statsObserver.observe(statsSection);
