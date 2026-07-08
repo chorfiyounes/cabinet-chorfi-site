@@ -93,19 +93,55 @@ filterTabs.forEach(tab => {
   });
 });
 
+// Web3Forms — clé d'accès publique (destinée au HTML côté client)
+const WEB3FORMS_KEY = '7461a6b3-ce5d-46e5-9ca0-a6391cce6470';
+
+async function sendViaWeb3Forms(payload) {
+  const res = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ access_key: WEB3FORMS_KEY, ...payload })
+  });
+  const data = await res.json();
+  if (!data.success) throw new Error(data.message || 'Échec de l\'envoi');
+  return data;
+}
+
 // Contact form
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
   const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
   const name = form.querySelector('#name').value;
   const email = form.querySelector('#email').value;
   const message = form.querySelector('#message').value;
-  const subject = encodeURIComponent('Demande de contact — cabinet-chorfi.com');
-  const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-  window.location.href = `mailto:chorfi.younes@gmail.com?subject=${subject}&body=${body}`;
+  const company = form.querySelector('#company') ? form.querySelector('#company').value : '';
+  const phone = form.querySelector('#phone') ? form.querySelector('#phone').value : '';
+  const country = form.querySelector('#country') ? form.querySelector('#country').value : '';
+  const projectType = form.querySelector('#project_type') ? form.querySelector('#project_type').value : '';
   const success = document.getElementById('form-success');
-  if (success) success.style.display = 'block';
-  form.reset();
+
+  const btnLabel = btn ? btn.textContent : '';
+  if (btn) { btn.disabled = true; btn.textContent = 'Envoi en cours…'; }
+
+  try {
+    await sendViaWeb3Forms({
+      subject: 'Demande de contact — metreurchorfi.com',
+      from_name: name,
+      Nom: name, Email: email, Société: company,
+      Téléphone: phone, Pays: country, 'Type de projet': projectType,
+      Message: message
+    });
+    if (success) success.style.display = 'block';
+    form.reset();
+  } catch (err) {
+    // Secours : ouverture du client mail
+    const subject = encodeURIComponent('Demande de contact — metreurchorfi.com');
+    const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\nSociété: ${company}\nTéléphone: ${phone}\nPays: ${country}\nType de projet: ${projectType}\n\nMessage:\n${message}`);
+    window.location.href = `mailto:chorfi.younes@gmail.com?subject=${subject}&body=${body}`;
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
+  }
 }
 
 // === ANIMATIONS ===
@@ -241,23 +277,40 @@ const counterObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
 
 // Candidature spontanée
-function handleCandidature(e) {
+async function handleCandidature(e) {
   e.preventDefault();
   const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
   const name = form.querySelector('#cand_name').value;
   const email = form.querySelector('#cand_email').value;
   const phone = form.querySelector('#cand_phone').value;
   const poste = form.querySelector('#cand_poste').value;
   const message = form.querySelector('#cand_message').value;
   const exp = form.querySelector('#cand_exp').value;
-  const subject = encodeURIComponent('Candidature spontanée — Cabinet CHORFI');
-  const body = encodeURIComponent(
-    `Nom : ${name}\nEmail : ${email}\nTéléphone : ${phone}\nPoste souhaité : ${poste}\nExpérience : ${exp}\n\nLettre de motivation :\n${message}\n\n(CV en pièce jointe)`
-  );
-  window.location.href = `mailto:chorfi.younes@gmail.com?subject=${subject}&body=${body}`;
   const success = document.getElementById('cand-success');
-  if (success) success.style.display = 'block';
-  form.reset();
+
+  const btnLabel = btn ? btn.textContent : '';
+  if (btn) { btn.disabled = true; btn.textContent = 'Envoi en cours…'; }
+
+  try {
+    await sendViaWeb3Forms({
+      subject: 'Candidature spontanée — Cabinet CHORFI',
+      from_name: name,
+      Nom: name, Email: email, Téléphone: phone,
+      'Poste souhaité': poste, Expérience: exp,
+      'Lettre de motivation': message
+    });
+    if (success) success.style.display = 'block';
+    form.reset();
+  } catch (err) {
+    const subject = encodeURIComponent('Candidature spontanée — Cabinet CHORFI');
+    const body = encodeURIComponent(
+      `Nom : ${name}\nEmail : ${email}\nTéléphone : ${phone}\nPoste souhaité : ${poste}\nExpérience : ${exp}\n\nLettre de motivation :\n${message}\n\n(CV en pièce jointe)`
+    );
+    window.location.href = `mailto:chorfi.younes@gmail.com?subject=${subject}&body=${body}`;
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
+  }
 }
 
 // === PROTECTION PHOTOS ===
