@@ -107,10 +107,60 @@ async function sendViaWeb3Forms(payload) {
   return data;
 }
 
+// --- Validation inline des formulaires ---
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+function setFieldError(input, msg) {
+  const err = document.getElementById('err-' + input.id);
+  if (msg) {
+    input.classList.add('invalid');
+    input.setAttribute('aria-invalid', 'true');
+    if (err) err.textContent = msg;
+  } else {
+    input.classList.remove('invalid');
+    input.removeAttribute('aria-invalid');
+    if (err) err.textContent = '';
+  }
+}
+
+function validateField(input) {
+  const val = input.value.trim();
+  if (input.hasAttribute('required') && !val) {
+    setFieldError(input, 'Ce champ est obligatoire.');
+    return false;
+  }
+  if (input.type === 'email' && val && !EMAIL_RE.test(val)) {
+    setFieldError(input, 'Adresse email invalide.');
+    return false;
+  }
+  setFieldError(input, '');
+  return true;
+}
+
+function validateForm(form) {
+  const fields = form.querySelectorAll('input[required], textarea[required], input[type="email"]');
+  let firstInvalid = null;
+  fields.forEach(f => { if (!validateField(f) && !firstInvalid) firstInvalid = f; });
+  if (firstInvalid) firstInvalid.focus();
+  return !firstInvalid;
+}
+
+// Validation à la sortie du champ (on blur)
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.contact-form input, .contact-form textarea, #candidatureForm input, #candidatureForm textarea')
+    .forEach(f => f.addEventListener('blur', () => validateField(f)));
+});
+
+function tapConfirm() {
+  if (navigator.vibrate) navigator.vibrate(12);
+}
+
 // Contact form
 async function handleSubmit(e) {
   e.preventDefault();
   const form = e.target;
+  if (!validateForm(form)) return;
+
   const btn = form.querySelector('button[type="submit"]');
   const name = form.querySelector('#name').value;
   const email = form.querySelector('#email').value;
@@ -120,6 +170,8 @@ async function handleSubmit(e) {
   const country = form.querySelector('#country') ? form.querySelector('#country').value : '';
   const projectType = form.querySelector('#project_type') ? form.querySelector('#project_type').value : '';
   const success = document.getElementById('form-success');
+  const errBox = document.getElementById('form-error');
+  if (errBox) errBox.style.display = 'none';
 
   const btnLabel = btn ? btn.textContent : '';
   if (btn) { btn.disabled = true; btn.textContent = 'Envoi en cours…'; }
@@ -133,12 +185,13 @@ async function handleSubmit(e) {
       Message: message
     });
     if (success) success.style.display = 'block';
+    tapConfirm();
     form.reset();
   } catch (err) {
-    // Secours : ouverture du client mail
-    const subject = encodeURIComponent('Demande de contact — metreurchorfi.com');
-    const body = encodeURIComponent(`Nom: ${name}\nEmail: ${email}\nSociété: ${company}\nTéléphone: ${phone}\nPays: ${country}\nType de projet: ${projectType}\n\nMessage:\n${message}`);
-    window.location.href = `mailto:chorfi.younes@gmail.com?subject=${subject}&body=${body}`;
+    if (errBox) {
+      errBox.textContent = 'L\'envoi a échoué. Réessayez, ou écrivez-nous directement à chorfi.younes@gmail.com.';
+      errBox.style.display = 'block';
+    }
   } finally {
     if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
   }
@@ -276,42 +329,21 @@ const counterObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
 
-// Candidature spontanée
-async function handleCandidature(e) {
-  e.preventDefault();
-  const form = e.target;
-  const btn = form.querySelector('button[type="submit"]');
-  const name = form.querySelector('#cand_name').value;
-  const email = form.querySelector('#cand_email').value;
-  const phone = form.querySelector('#cand_phone').value;
-  const poste = form.querySelector('#cand_poste').value;
-  const message = form.querySelector('#cand_message').value;
-  const exp = form.querySelector('#cand_exp').value;
-  const success = document.getElementById('cand-success');
-
-  const btnLabel = btn ? btn.textContent : '';
-  if (btn) { btn.disabled = true; btn.textContent = 'Envoi en cours…'; }
-
-  try {
-    await sendViaWeb3Forms({
-      subject: 'Candidature spontanée — Cabinet CHORFI',
-      from_name: name,
-      Nom: name, Email: email, Téléphone: phone,
-      'Poste souhaité': poste, Expérience: exp,
-      'Lettre de motivation': message
+// Le formulaire candidature est soumis nativement vers FormSubmit
+// (support des pièces jointes CV). Contrôle de la taille du CV avant envoi.
+document.addEventListener('DOMContentLoaded', () => {
+  const candForm = document.getElementById('candidatureForm');
+  const cvInput = document.getElementById('cand_cv');
+  if (candForm && cvInput) {
+    candForm.addEventListener('submit', (e) => {
+      if (cvInput.files.length > 0 && cvInput.files[0].size > 5 * 1024 * 1024) {
+        e.preventDefault();
+        alert('Le fichier CV dépasse 5 Mo. Choisissez un fichier plus léger.');
+        cvInput.focus();
+      }
     });
-    if (success) success.style.display = 'block';
-    form.reset();
-  } catch (err) {
-    const subject = encodeURIComponent('Candidature spontanée — Cabinet CHORFI');
-    const body = encodeURIComponent(
-      `Nom : ${name}\nEmail : ${email}\nTéléphone : ${phone}\nPoste souhaité : ${poste}\nExpérience : ${exp}\n\nLettre de motivation :\n${message}\n\n(CV en pièce jointe)`
-    );
-    window.location.href = `mailto:chorfi.younes@gmail.com?subject=${subject}&body=${body}`;
-  } finally {
-    if (btn) { btn.disabled = false; btn.textContent = btnLabel; }
   }
-}
+});
 
 // === PROTECTION PHOTOS ===
 document.addEventListener('contextmenu', (e) => {
