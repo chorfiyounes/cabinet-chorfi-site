@@ -895,7 +895,11 @@ h2.section-title {
 }
 .blog-article-inner ul, .blog-article-inner ol {
   margin: 0 0 20px 24px;
+  padding-left: 4px;
 }
+.blog-article-inner ul { list-style: disc; }
+.blog-article-inner ol { list-style: decimal; }
+.blog-article-inner li { list-style: inherit; }
 .blog-article-inner li {
   font-size: 15px;
   line-height: 1.8;
