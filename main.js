@@ -345,10 +345,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// === PROTECTION PHOTOS ===
-document.addEventListener('contextmenu', (e) => {
-  if (e.target.tagName === 'IMG') e.preventDefault();
-});
-document.addEventListener('dragstart', (e) => {
-  if (e.target.tagName === 'IMG') e.preventDefault();
-});
+// === PROTECTION DU CONTENU (texte + photos) ===
+(function() {
+  // Les champs de formulaire restent utilisables (taper, coller, sélectionner)
+  const inField = (el) => !!(el && el.closest && el.closest('input, textarea, select'));
+
+  // Clic droit désactivé partout (sauf champs de formulaire)
+  document.addEventListener('contextmenu', (e) => { if (!inField(e.target)) e.preventDefault(); });
+
+  // Glisser d'images / de texte désactivé
+  document.addEventListener('dragstart', (e) => e.preventDefault());
+
+  // Copier / couper désactivés (sauf champs de formulaire)
+  document.addEventListener('copy', (e) => { if (!inField(e.target)) e.preventDefault(); });
+  document.addEventListener('cut',  (e) => { if (!inField(e.target)) e.preventDefault(); });
+
+  // Raccourcis clavier de copie / enregistrement / source (sauf champs de formulaire)
+  document.addEventListener('keydown', (e) => {
+    if (inField(e.target)) return;
+    const k = (e.key || '').toLowerCase();
+    if ((e.ctrlKey || e.metaKey) && ['c', 'x', 'a', 's', 'u'].includes(k)) e.preventDefault();
+  });
+})();
